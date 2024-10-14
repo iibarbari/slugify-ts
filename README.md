@@ -19,7 +19,7 @@
 ## Basic usage
 
 ```typescript
-import { slugify } from 'slugify-utility';
+import { slugify } from 'slugify';
 
 const result = slugify('Héllo Wörld!');
 console.log(result);  // Output: 'hello-world'
