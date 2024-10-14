@@ -4,6 +4,7 @@
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "repository": "https://github.com/iibarbari/slugify",
   "scripts": {
     "build": "bun build index.ts --outdir ./dist",
     "start": "bun run index.ts",
