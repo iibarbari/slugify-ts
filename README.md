@@ -105,4 +105,3 @@ If `true`, a timestamp will be appended to the slug.
 
 
 PRs are welcome!
-# slugify
