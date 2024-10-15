@@ -27,7 +27,6 @@ jobs:
         with:
           node-version: latest
           registry-url: https://npm.pkg.github.com
-          scope: '@iibarbari'
       - run: |
           echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
           npm publish --access public --registry https://npm.pkg.github.co
