@@ -1,5 +1,5 @@
 {
-  "version": "1.0.20",
+  "version": "1.0.21",
   "name": "slugify-ts",
   "main": "build/index.js",
   "types": "build/index.d.ts",
