@@ -23,12 +23,11 @@ jobs:
       packages: write
     steps:
       - uses: actions/checkout@v4
-      - uses: oven-sh/setup-bun@v2
+      - uses: actions/setup-node@v4
         with:
-          bun-version: latest
-      - run: bun install
+          node-version: latest
       - run: |
           echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
-          bun publish --registry https://npm.pkg.github.co
+          npm publish ./dist --access public --registry https://npm.pkg.github.co
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
