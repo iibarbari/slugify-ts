@@ -1,7 +1,6 @@
 {
-  "version": "1.0.18",
+  "version": "1.0.19",
   "name": "slugify-ts",
-  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": {
@@ -14,6 +13,9 @@
     "dev": "bun --hot run index.ts",
     "test": "bun test"
   },
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
     "@types/bun": "^1.1.11",
     "@types/unidecode": "^0.1.3"
@@ -24,7 +26,7 @@
   "dependencies": {
     "unidecode": "^1.1.0"
   },
-  "description": "**slug-ify** is a customizable TypeScript function that transforms any string into a URL-friendly slug. It handles:",
+  "description": "slugify-ts is a customizable TypeScript function that transforms any string into a URL-friendly slug.",
   "bugs": {
     "url": "https://github.com/iibarbari/slugify/issues"
   },
