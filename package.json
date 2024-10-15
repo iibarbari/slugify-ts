@@ -1,6 +1,6 @@
 {
-  "version": "1.0.17",
-  "name": "slug-ify",
+  "version": "1.0.18",
+  "name": "slugify-ts",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
