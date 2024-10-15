@@ -15,24 +15,6 @@ jobs:
       - run: bun install --frozen-lockfile
       - run: bun build index.ts --outdir ./dist
 
-  publish-gpr:
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: latest
-          registry-url: https://npm.pkg.github.com
-      - run: |
-          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
-          npm publish --access public --registry https://npm.pkg.github.co
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
