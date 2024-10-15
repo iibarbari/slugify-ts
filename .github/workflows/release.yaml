@@ -29,7 +29,6 @@ jobs:
       - run: bun install
       - run: |
           echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
-          ls -al ./dist
-          bun publish ./dist --access public --registry https://npm.pkg.github.com
+          bun publish --registry https://npm.pkg.github.co
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
