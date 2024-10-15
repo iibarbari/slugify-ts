@@ -13,7 +13,7 @@ jobs:
         with:
           bun-version: latest
       - run: bun install
-      - run: bun build
+      - run: bun build index.ts --outdir ./dist
 
   publish-gpr:
     needs: build
