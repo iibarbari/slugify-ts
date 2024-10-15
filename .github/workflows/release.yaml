@@ -13,7 +13,7 @@ jobs:
         with:
           bun-version: latest
       - run: bun install --frozen-lockfile
-      - run: bun build index.ts --outdir ./dist
+      - run: bun build index.ts --outdir ./build
 
   publish-npm:
     needs: build

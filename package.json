@@ -1,20 +1,20 @@
 {
-  "version": "1.0.19",
+  "version": "1.0.20",
   "name": "slugify-ts",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/iibarbari/slugify.git"
   },
   "scripts": {
-    "build": "bun build index.ts --outdir ./dist",
+    "build": "bun build index.ts --outdir ./build",
     "start": "bun run index.ts",
     "dev": "bun --hot run index.ts",
     "test": "bun test"
   },
   "files": [
-    "dist"
+    "build"
   ],
   "devDependencies": {
     "@types/bun": "^1.1.11",
