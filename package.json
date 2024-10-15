@@ -1,15 +1,12 @@
 {
-  "version": "1.0.16",
-  "name": "@iibarbari/slugify",
+  "version": "1.0.17",
+  "name": "slug-ify",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/iibarbari/slugify.git"
-  },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
     "build": "bun build index.ts --outdir ./dist",
@@ -27,7 +24,7 @@
   "dependencies": {
     "unidecode": "^1.1.0"
   },
-  "description": "**slugify** is a customizable TypeScript function that transforms any string into a URL-friendly slug. It handles:",
+  "description": "**slug-ify** is a customizable TypeScript function that transforms any string into a URL-friendly slug. It handles:",
   "bugs": {
     "url": "https://github.com/iibarbari/slugify/issues"
   },
