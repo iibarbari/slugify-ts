@@ -32,8 +32,6 @@ jobs:
   publish-npm:
     needs: cache-install-build
     runs-on: ubuntu-latest
-    run: |
-      ls -la
     permissions:
       contents: read
       packages: write
@@ -43,6 +41,8 @@ jobs:
         with:
           node-version: latest
           registry-url: https://registry.npmjs.org
+      - run: |
+          ls -la
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
