@@ -32,7 +32,7 @@ jobs:
   publish-npm:
     needs: cache-install-build
     runs-on: ubuntu-latest
-    run:
+    run: |
       ls -la
     permissions:
       contents: read
