@@ -32,6 +32,8 @@ jobs:
   publish-npm:
     needs: cache-install-build
     runs-on: ubuntu-latest
+    run:
+      ls -la
     permissions:
       contents: read
       packages: write

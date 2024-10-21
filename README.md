@@ -1,6 +1,6 @@
-# slugify
+# slugify-ts
 
-**slugify** is a customizable TypeScript function that transforms any string into a URL-friendly slug. It handles:
+slugify-ts is a customizable TypeScript function that transforms any string into a URL-friendly slug. It handles:
 
 - Removing unwanted characters.
 - Transliteration of Unicode characters (e.g., `ü`, `é`, `ñ`) into their closest ASCII equivalents (e.g., `ue`, `e`, `n`).
@@ -19,7 +19,7 @@
 ## Basic usage
 
 ```typescript
-import { slugify } from 'slugify';
+import slugify from 'slugify-ts';
 
 const result = slugify('Héllo Wörld!');
 console.log(result);  // Output: 'hello-world'
