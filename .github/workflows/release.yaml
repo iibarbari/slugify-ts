@@ -42,6 +42,7 @@ jobs:
           node-version: latest
           registry-url: https://registry.npmjs.org
       - run: |
+          pwd
           ls -la
       - run: npm publish --access public
         env:
