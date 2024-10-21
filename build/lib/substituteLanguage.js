@@ -1,5 +1,5 @@
-import { substitute } from './substitute';
-import { deCharSub, defaultCharSub, enCharSub, trCharSub } from '../data/languageSubstitutions';
+import { substitute } from './substitute.js';
+import { deCharSub, defaultCharSub, enCharSub, trCharSub } from '../data/languageSubstitutions.js';
 export function substituteLanguage({ str, language = "en" }) {
     switch (language) {
         case "de":

@@ -1,8 +1,8 @@
-import { timestamp } from './lib/timestamp';
-import { substitute } from './lib/substitute';
-import { substituteLanguage } from './lib/substituteLanguage';
-import { smartTruncate } from './lib/smartTruncate';
+import { timestamp } from './lib/timestamp.js';
+import { substitute } from './lib/substitute.js';
+import { substituteLanguage } from './lib/substituteLanguage.js';
 import unidecode from 'unidecode';
+import { smartTruncate } from './lib/smartTruncate.js';
 const defaultOptions = {
     customSubstitutions: {},
     charSubstitutions: {},
@@ -11,7 +11,7 @@ const defaultOptions = {
     lowercase: true,
     appendTimestamp: false,
 };
-export function slugify(slug, params) {
+function slugify(slug, params) {
     const { appendTimestamp, charSubstitutions, customSubstitutions, language = "en", enableSmartTruncate, lowercase, maxLength = 0 } = { ...defaultOptions, ...params };
     // Trim
     slug = slug.trim();
@@ -53,3 +53,4 @@ export function slugify(slug, params) {
     }
     return slug;
 }
+export default slugify;

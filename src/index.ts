@@ -1,32 +1,9 @@
-import { timestamp } from './lib/timestamp';
-import { substitute } from './lib/substitute';
-import { substituteLanguage } from './lib/substituteLanguage';
-import type { Substitution, SupportedLanguages } from './types';
-import { smartTruncate } from './lib/smartTruncate';
+import { timestamp } from './lib/timestamp.js';
+import { substitute } from './lib/substitute.js';
+import { substituteLanguage } from './lib/substituteLanguage.js';
+import type { SlugifyOptions } from './@types/index.js';
 import unidecode from 'unidecode';
-
-type SlugifyOptions = {
-  // Custom substitutions for strings
-  // Default: {}
-  customSubstitutions?: Substitution;
-  // Custom rune substitutions for individual characters
-  // Default: {}
-  charSubstitutions?: Substitution;
-  // Language for substitutions
-  language?: SupportedLanguages;
-  // Max length of slug (0 means no limit)
-  // Default: 0
-  maxLength?: number;
-  // If true, truncates intelligently
-  // Default: true
-  enableSmartTruncate?: boolean;
-  // If true, converts slug to lowercase
-  // Default: true
-  lowercase?: boolean;
-  // If true, appends a timestamp to the slug
-  // Default: false
-  appendTimestamp?: boolean;
-}
+import { smartTruncate } from './lib/smartTruncate.js';
 
 const defaultOptions: SlugifyOptions = {
   customSubstitutions: {},
@@ -37,7 +14,7 @@ const defaultOptions: SlugifyOptions = {
   appendTimestamp: false,
 };
 
-export function slugify(slug: string, params?: SlugifyOptions): string {
+function slugify(slug: string, params?: SlugifyOptions): string {
   const {
     appendTimestamp,
     charSubstitutions,
@@ -62,7 +39,7 @@ export function slugify(slug: string, params?: SlugifyOptions): string {
   }
 
   // Apply language substitutions
-  slug = substituteLanguage({ str: slug, language});
+  slug = substituteLanguage({ str: slug, language });
 
   // Unidecode
   slug = unidecode(slug);
@@ -100,3 +77,5 @@ export function slugify(slug: string, params?: SlugifyOptions): string {
 
   return slug;
 }
+
+export default slugify;

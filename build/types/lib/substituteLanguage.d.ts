@@ -1,7 +1,2 @@
-import type { SupportedLanguages } from '../types';
-type SubstituteLanguageOptions = {
-    str: string;
-    language?: SupportedLanguages;
-};
+import type { SubstituteLanguageOptions } from '../@types/index.js';
 export declare function substituteLanguage({ str, language }: SubstituteLanguageOptions): string;
-export {};

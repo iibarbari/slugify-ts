@@ -1,11 +1,6 @@
-import { substitute } from './substitute';
-import { deCharSub, defaultCharSub, enCharSub, trCharSub } from '../data/languageSubstitutions';
-import type { SupportedLanguages } from '../types';
-
-type SubstituteLanguageOptions = {
-  str: string;
-  language?: SupportedLanguages;
-}
+import { substitute } from './substitute.js';
+import { deCharSub, defaultCharSub, enCharSub, trCharSub } from '../data/languageSubstitutions.js';
+import type { SubstituteLanguageOptions } from '../@types/index.js';
 
 export function substituteLanguage({ str, language = "en" }: SubstituteLanguageOptions): string {
   switch (language) {

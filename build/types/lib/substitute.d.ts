@@ -1,4 +1,4 @@
-import type { Substitution } from '../types';
+import type { Substitution } from '../@types/index.js';
 type SlugifyOptions = {
     str: string;
     substitutions: Substitution;

@@ -1,4 +1,4 @@
-type Substitution = { [key: string]: string };
+import type { Substitution } from '../@types/index.js';
 
 export const defaultCharSub: Substitution = {
   '"': "",
