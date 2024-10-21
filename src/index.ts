@@ -1,8 +1,8 @@
-import { timestamp } from './lib/timestamp.ts';
-import { substitute } from './lib/substitute.ts';
-import { substituteLanguage } from './lib/substituteLanguage.ts';
+import { timestamp } from './lib/timestamp';
+import { substitute } from './lib/substitute';
+import { substituteLanguage } from './lib/substituteLanguage';
 import type { Substitution, SupportedLanguages } from './types';
-import { smartTruncate } from './lib/smartTruncate.ts';
+import { smartTruncate } from './lib/smartTruncate';
 import unidecode from 'unidecode';
 
 type SlugifyOptions = {

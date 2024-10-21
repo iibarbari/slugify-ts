@@ -12,7 +12,10 @@
     "moduleResolution": "bundler",
     "verbatimModuleSyntax": true,
     "declaration": true,
-    "declarationMap": true,
+    "outDir": "./build",
+    "rootDir": "./src",
+    "declarationDir": "./build/types",
+    "composite": true,
 
     // Best practices
     "strict": true,
@@ -22,8 +25,12 @@
     // Some stricter flags (disabled by default)
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "noPropertyAccessFromIndexSignature": false,
-
-    "outDir": "./build",
-  }
+    "noPropertyAccessFromIndexSignature": false
+  },
+  "include": ["src/**/*"],
+  "exclude": [
+    "node_modules",
+    "build",
+    "eslint.config.mjs"
+  ]
 }

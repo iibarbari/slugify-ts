@@ -1,5 +1,5 @@
-import { substitute } from './substitute.ts';
-import { deCharSub, defaultCharSub, enCharSub, trCharSub } from '../data/languageSubstitutions.ts';
+import { substitute } from './substitute';
+import { deCharSub, defaultCharSub, enCharSub, trCharSub } from '../data/languageSubstitutions';
 import type { SupportedLanguages } from '../types';
 
 type SubstituteLanguageOptions = {

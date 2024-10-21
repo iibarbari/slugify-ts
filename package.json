@@ -2,23 +2,24 @@
   "version": "1.0.21",
   "name": "slugify-ts",
   "main": "build/index.js",
-  "types": "build/index.d.ts",
+  "types": "build/types/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/iibarbari/slugify.git"
   },
   "scripts": {
-    "build": "bun build index.ts --outdir ./build",
-    "start": "bun run index.ts",
-    "dev": "bun --hot run index.ts",
-    "test": "bun test"
+    "build": "pnpm exec tsc"
   },
   "files": [
     "build"
   ],
   "devDependencies": {
+    "@eslint/js": "^9.13.0",
     "@types/bun": "^1.1.11",
-    "@types/unidecode": "^0.1.3"
+    "@types/unidecode": "^0.1.3",
+    "eslint": "^9.13.0",
+    "globals": "^15.11.0",
+    "typescript-eslint": "^8.10.0"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
