@@ -1,5 +1,5 @@
 {
-  "version": "1.0.29",
+  "version": "1.0.30",
   "name": "slugify-ts",
   "main": "build/index.cjs",
   "module": "build/index.js",
@@ -17,7 +17,6 @@
     "build": "rollup -c",
     "dev": "tsc-watch --onSuccess \"pnpm run start\"",
     "start": "node build/index.js",
-    "prepare": "pnpm run build",
     "prepublishOnly": "pnpm run build"
   },
   "files": [
